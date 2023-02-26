@@ -95,7 +95,7 @@ app.use('/stories', require('./routes/stories'))
 // app.listen(PORT, console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`))
 connectDB().then(() => {
     app.listen(
-      PORT, () => {
+      process.env.PORT || PORT, () => {
       console.log(`Server running in ${process.env.NODE_ENV} mode on port ${PORT}`);
       })
     })
